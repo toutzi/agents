@@ -6,12 +6,11 @@ from openai import OpenAI
 from anthropic import Anthropic
 from IPython.display import Markdown, display
 
-# Always remember to do this!
+# Load environment variables from a .env file
+# The .env file should contain your API keys
 load_dotenv(override=True)
 
-
 # Print the key prefixes to help with any debugging
-# Those variables are declared in the .env file
 openai_api_key = os.getenv('OPENAI_API_KEY')
 anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
 google_api_key = os.getenv('GOOGLE_API_KEY')
