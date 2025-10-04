@@ -70,11 +70,8 @@ messages = [{"role": "user", "content": question}]
 
 # Competitor #1: GPT
 model_name = "gpt-4o-mini"
-
-
 response = openai.chat.completions.create(model=model_name, messages=messages)
 answer = response.choices[0].message.content
-
 
 display(Markdown(answer))
 competitors.append(model_name)
@@ -84,11 +81,8 @@ answers.append(answer)
 # Competitor #2: Deepseek
 deepseek = OpenAI(api_key=deepseek_api_key, base_url="https://api.deepseek.com/v1")
 model_name = "deepseek-chat"
-
-
 response = deepseek.chat.completions.create(model=model_name, messages=messages)
 answer = response.choices[0].message.content
-
 
 display(Markdown(answer))
 competitors.append(model_name)
@@ -98,58 +92,43 @@ answers.append(answer)
 # Competitor #3: locally installed llama3
 ollama = OpenAI(base_url='http://localhost:11434/v1', api_key='ollama')
 model_name = "llama3"
-
-
 response = ollama.chat.completions.create(model=model_name, messages=messages)
 answer = response.choices[0].message.content
-
 
 display(Markdown(answer))
 competitors.append(model_name)
 answers.append(answer)
-
-
 
 
 # Competitor not consulted
 # ------------------------
+"""
+# Competitor #4: Claude
 # Anthropic has a slightly different API, and Max Tokens is required
-""" 
 model_name = "claude-3-7-sonnet-latest"
-
-
 claude = Anthropic()
 response = claude.messages.create(model=model_name, messages=messages, max_tokens=1000)
 answer = response.content[0].text
 
-
 display(Markdown(answer))
 competitors.append(model_name)
 answers.append(answer)
 
-
-# Gemini
+# Competitor #5: Gemini
 gemini = OpenAI(api_key=google_api_key, base_url="https://generativelanguage.googleapis.com/v1beta/openai/")
 model_name = "gemini-2.0-flash"
-
-
 response = gemini.chat.completions.create(model=model_name, messages=messages)
 answer = response.choices[0].message.content
 
-
 display(Markdown(answer))
 competitors.append(model_name)
 answers.append(answer)
 
-
-# Groq llama
+# Competitor #6: llama from Groq
 groq = OpenAI(api_key=groq_api_key, base_url="https://api.groq.com/openai/v1")
 model_name = "llama-3.3-70b-versatile"
-
-
 response = groq.chat.completions.create(model=model_name, messages=messages)
 answer = response.choices[0].message.content
-
 
 display(Markdown(answer))
 competitors.append(model_name)
@@ -173,7 +152,6 @@ print(answers)
 for competitor, answer in zip(competitors, answers):
    print(f"Competitor: {competitor}\n\n{answer}")
 
-
 # Let's bring this together - note the use of "enumerate"
 together = ""
 for index, answer in enumerate(answers):
@@ -181,14 +159,11 @@ for index, answer in enumerate(answers):
    together += answer + "\n\n"
 print(together)
 
-
 # Let's create a judge to evaluate the best model
 judge = f"""You are judging a competition between {len(competitors)} competitors.
 Each model has been given this question:
 
-
 {question}
-
 
 Your job is to evaluate each response for clarity and strength of argument, and rank them in order of best to worst.
 Respond with JSON, and only JSON, with the following format:
