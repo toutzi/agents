@@ -21,10 +21,9 @@ GROQ_API_KEY=
 ```
 
 ```py 
-# To run your notebooks, go to notebook folder:
+# To run your notebooks, go to notebook root folder:
 cd Documents/dev/agents
 uv sync
-# run in the env
 uv run
 ```
 
