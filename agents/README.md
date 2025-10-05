@@ -1,10 +1,19 @@
 ## Agents
 
+'# to run:<br/>
+'# Create .env file with your keys:<br/>
+OPENAI_API_KEY=<br/>
+DEEPSEEK_API_KEY=<br/>
+ANTHROPIC_API_KEY=<br/>
+GOOGLE_API_KEY=<br/>
+GROQ_API_KEY=<br/><br/>
+
 Use cursor to run the ipynb Python Notebooks<br/>
 Use uv to create venv https://github.com/astral-sh/uv   <br/>
+'# got notebook folder, 
 cd Documents/dev/agents<br/>
 uv sync<br/>
-# run in the env<br/>
+'# run in the env<br/>
 uv run<br/>
 
 
