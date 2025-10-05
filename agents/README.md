@@ -1,23 +1,27 @@
 ## Agents
 
-'# to run:<br/>
-'# Create .env file with your keys:<br/>
-OPENAI_API_KEY=<br/>
-DEEPSEEK_API_KEY=<br/>
-ANTHROPIC_API_KEY=<br/>
-GOOGLE_API_KEY=<br/>
-GROQ_API_KEY=<br/><br/>
 
-Use cursor to run the ipynb Python Notebooks<br/>
-Use uv to create venv https://github.com/astral-sh/uv   <br/>
-'# got notebook folder, 
-cd Documents/dev/agents<br/>
-uv sync<br/>
-'# run in the env<br/>
-uv run<br/>
+### Before Starting
+```py 
+# to run: Create .env file with your keys:
+OPENAI_API_KEY=
+DEEPSEEK_API_KEY=
+ANTHROPIC_API_KEY=
+GOOGLE_API_KEY=
+GROQ_API_KEY=
+```
 
+Use [cursor](https://cursor.com/dashboard) to run the ipynb Python Notebooks <br/>
+Use [uv](https://github.com/astral-sh/uv) to create venv and run the Notebooks from within cursor, 10x faster then pip -- equivalent to python3 -m venv venv
+```py 
+# got notebook folder, 
+cd Documents/dev/agents
+uv sync
+# run in the env
+uv run
+```
 
-
+## Contents
 ### Orchestrate LLMs <br/>
 <li>
 This script will challenge multiple LLM models including local llama3 with local endpoint </li>
