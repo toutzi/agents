@@ -30,15 +30,16 @@ uv run
 
 ## Contents
 ### Orchestrate LLMs <br/>
-<li>
-This script will challenge multiple LLM models including local llama3 with local endpoint </li>
+<li>This script will challenge multiple LLM models including local llama3 with local endpoint </li>
 <li>Then we ask one of the models to find the best answer</li>
 
 ### agent acting as you <br/>
-<li>
-feed the LLM with your Linked in profile and a summary txt </li>
+<li>Feed the LLM with your Linked in profile and a summary txt </li>
 <li>Evaluate the answers with "pydantic"</li>
 
 ### agent using tool <br/>
+<li>Feed the LLM with your Linked in profile and a summary txt </li>
+<li>Agent can send a notification to mobile via an API that sends a notification to an application</li>
+<li>Deploy on hugging face, app.py is the deployable version</li>
 
 
