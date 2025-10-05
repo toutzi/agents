@@ -1,9 +1,12 @@
-## Agents
+# Agents
 
 
-### Before Starting
+## Before Starting
+* Use [cursor](https://cursor.com/dashboard) to run the ipynb Python Notebooks <br/>
+* Use [uv](https://github.com/astral-sh/uv) to create venv and run the Notebooks from within cursor, 10x faster then pip -- equivalent to python3 -m venv venv
+
 ```py 
-# to run: Create .env file with your keys:
+# Before running, go to your notebooks folder, create .env file with your keys:
 OPENAI_API_KEY=
 DEEPSEEK_API_KEY=
 ANTHROPIC_API_KEY=
@@ -11,10 +14,8 @@ GOOGLE_API_KEY=
 GROQ_API_KEY=
 ```
 
-Use [cursor](https://cursor.com/dashboard) to run the ipynb Python Notebooks <br/>
-Use [uv](https://github.com/astral-sh/uv) to create venv and run the Notebooks from within cursor, 10x faster then pip -- equivalent to python3 -m venv venv
 ```py 
-# got notebook folder, 
+# To run your notebooks, go to notebook folder:
 cd Documents/dev/agents
 uv sync
 # run in the env
