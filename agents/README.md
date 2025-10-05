@@ -5,6 +5,12 @@
 * Use [cursor](https://cursor.com/dashboard) to run the ipynb Python Notebooks <br/>
 * Use [uv](https://github.com/astral-sh/uv) to create venv and run the Notebooks from within cursor, 10x faster then pip -- equivalent to python3 -m venv venv
 
+```py
+# clone the repo
+git clone https://github.com/toutzi/agents.git
+git clone git@github.com:toutzi/agents.git
+```
+
 ```py 
 # Before running, go to your notebooks folder, create .env file with your keys:
 OPENAI_API_KEY=
