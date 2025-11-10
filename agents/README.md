@@ -30,8 +30,7 @@ uv run
 ```py 
 # To run your .py files, go to .py root folder:
 cd Documents/dev/agents
-uv sync
-uv run python3 <filename.py>
+python3 <filename.py>
 ```
 
 ## Contents
