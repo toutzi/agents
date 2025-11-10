@@ -27,9 +27,16 @@ uv sync
 uv run
 ```
 
+```py 
+# To run your .py files, go to .py root folder:
+cd Documents/dev/agents
+uv sync
+uv run python3 <filename.py>
+```
+
 ## Contents
 ### Orchestrate LLMs <br/>
-<li>This script will challenge multiple LLM models including local llama3 with local endpoint </li>
+<li>This script will ask the same quesiton to multiple LLM models including local llama3 with local endpoint </li>
 <li>Then we ask one of the models to find the best answer</li>
 
 ### Agent acting as you <br/>
