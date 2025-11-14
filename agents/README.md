@@ -21,16 +21,17 @@ GROQ_API_KEY=
 ```
 
 ```py 
-# To run your notebooks, go to notebook root folder:
-cd Documents/dev/agents
-uv sync
-uv run
-```
-
-```py 
 # To run your .py files, go to .py root folder:
 cd Documents/dev/agents
 python3 <filename.py>
+```
+
+```py 
+# To run your notebooks, go to notebook root folder:
+-> Run the Notebook block by block
+cd Documents/dev/agents
+uv sync
+uv run
 ```
 
 ## Contents
@@ -42,7 +43,7 @@ python3 <filename.py>
 <li>Feed the LLM with your Linked in profile and a summary txt </li>
 <li>Evaluate the answers with "pydantic"</li>
 
-### Agent acting as you and using tool -- deploy to hugging face<br/>
+### Agent acting as you and using tool: Agent sends message with API to mobile -- deploy to hugging face<br/>
 <li>Feed the LLM with your Linked in profile and a summary txt </li>
 <li>Agent can send a notification to mobile via an API that sends a notification to an application</li>
 <li>Deploy on hugging face, app.py is the deployable version</li>
