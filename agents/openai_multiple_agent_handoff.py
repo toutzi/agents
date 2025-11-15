@@ -1,3 +1,4 @@
+# Don't name your file agents.py, it will result in a cyclic error
 # import .env variables
 from dotenv import load_dotenv
 from agents import Agent, InputGuardrail, GuardrailFunctionOutput, Runner
