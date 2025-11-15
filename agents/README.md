@@ -34,18 +34,6 @@ uv sync
 uv run
 ```
 
-## Contents
-### Orchestrate LLMs <br/>
-<li>This script will ask the same quesiton to multiple LLM models including local llama3 with local endpoint </li>
-<li>Then we ask one of the models to find the best answer</li>
 
-### Agent acting as you <br/>
-<li>Feed the LLM with your Linked in profile and a summary txt </li>
-<li>Evaluate the answers with "pydantic"</li>
-
-### Agent acting as you and using tool: Agent sends message with API to mobile -- deploy to hugging face<br/>
-<li>Feed the LLM with your Linked in profile and a summary txt </li>
-<li>Agent can send a notification to mobile via an API that sends a notification to an application</li>
-<li>Deploy on hugging face, app.py is the deployable version</li>
 
 
