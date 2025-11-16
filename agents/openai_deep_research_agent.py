@@ -14,7 +14,7 @@ load_dotenv(override=True)
 
 
 
-# --- search_agent ---
+# --- Agen 1: search_agent ---
 INSTRUCTIONS = "You are a research assistant. Given a search term, you search the web for that term and \
 produce a concise summary of the results. The summary must 2-3 paragraphs and less than 300 \
 words. Capture the main points. Write succintly, no need to have complete sentences or good \
@@ -33,7 +33,7 @@ search_agent = Agent(
 
 
 
-# --- planner _agent ---
+# --- Agent 2: planner _agent ---
 # We will now use Structured Outputs, and include a description of the fields
 HOW_MANY_SEARCHES = 3
 
@@ -60,7 +60,7 @@ planner_agent = Agent(
 
 
 
-# --- writer_agent ---
+# --- Agent 3: writer_agent ---
 INSTRUCTIONS = (
     "You are a senior researcher tasked with writing a cohesive report for a research query. "
     "You will be provided with the original query, and some initial research done by a research assistant.\n"
@@ -110,7 +110,6 @@ async def search(item: WebSearchItem):
     result = await Runner.run(search_agent, input)
     return result.final_output
 
-
 async def write_report(query: str, search_results: list[str]):
     """ Use the writer agent to write a report based on the search results"""
     print("Thinking about report...")
@@ -128,9 +127,9 @@ async def send_email(report: ReportData):
 
 
 
-# query ="Latest AI Agent frameworks in 2025"
 async def main():
     with trace("Research trace"):
+        # query ="Latest AI Agent frameworks in 2025"
         query = input("Hi! What topic would you like reseach?")
         print("Starting research...")
         search_plan = await plan_searches(query)
