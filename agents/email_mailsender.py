@@ -4,8 +4,8 @@ import os
 
 # Load environment variables from .env file
 load_dotenv()
-email_to = os.getenv('MAILERSEND_EMAIL_TO')
 email_from = os.getenv('MAILERSEND_EMAIL_FROM')
+email_to = os.getenv('MAILERSEND_EMAIL_TO')
 
 ms = MailerSendClient()
 

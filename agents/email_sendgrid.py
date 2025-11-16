@@ -9,13 +9,11 @@ from sendgrid.helpers.mail import Mail, Email, To, Content
 
 load_dotenv()
 sg = sendgrid.SendGridAPIClient(api_key=os.getenv('SENDGRID_API_KEY'))
+email_from = os.getenv('EMAIL_FROM')
+email_to = os.getenv('EMAIL_TO')
 
-# print("key is: "+ sg.api_key)
-
-
-
-from_email = Email("info@mahernatout.com")  # Change to your verified sender
-to_email = To("toutzi@hotmail.com")  # Change to your recipient
+from_email = Email(email_from)  # Change to your verified sender
+to_email = To(email_to)  # Change to your recipient
 subject = "Sending with SendGrid is Fun"
 content = Content("text/plain", "and easy to do anywhere, even with Python")
 mail = Mail(from_email, to_email, subject, content)
