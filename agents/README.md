@@ -23,16 +23,13 @@ GROQ_API_KEY=
 ```py 
 # To run your .py files, go to .py root folder:
 cd Documents/dev/agents
+# using python
 python3 <filename.py>
+# using uv, rin 
+uv run <filename.py>
 ```
 
-```py 
-# To run your notebooks, go to notebook root folder:
--> Run the Notebook block by block
-cd Documents/dev/agents
-uv sync
-uv run
-```
+
 
 
 
