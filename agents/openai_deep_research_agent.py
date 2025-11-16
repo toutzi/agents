@@ -33,7 +33,7 @@ search_agent = Agent(
 
 
 
-# --- Agent 2: planner _agent ---
+# --- Agent 2: planner_agent ---
 # We will now use Structured Outputs, and include a description of the fields
 HOW_MANY_SEARCHES = 3
 
