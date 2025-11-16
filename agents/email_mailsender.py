@@ -1,14 +1,17 @@
 from mailersend import MailerSendClient, EmailBuilder
 from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
+email_to = os.getenv('MAILERSEND_EMAIL_TO')
+email_from = os.getenv('MAILERSEND_EMAIL_FROM')
 
 ms = MailerSendClient()
 
 email = (EmailBuilder()
-         .from_email("MS_TRMTcO@mahernatout.com", "Info")
-         .to_many([{"email": "toutzi@hotmail.com", "name": "Mr Maher"}])
+         .from_email(email_from, "Info")
+         .to_many([{"email": email_to, "name": "Mr Maher"}])
          .subject("Hello from MailerSend!")
          .html("Hello World!")
          .text("Hello World!")
