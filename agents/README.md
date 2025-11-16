@@ -25,7 +25,7 @@ GROQ_API_KEY=
 cd Documents/dev/agents
 # using python
 python3 <filename.py>
-# using uv, rin 
+# using uv 
 uv run <filename.py>
 ```
 
