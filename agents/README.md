@@ -3,7 +3,7 @@
 
 ## Before Starting
 * Use [cursor](https://cursor.com/dashboard) or [vscode](https://code.visualstudio.com/download) to run the ipynb Python Notebooks <br/>
-* Use [uv](https://github.com/astral-sh/uv) to create venv and run the Notebooks from within cursor or vscode, 10x faster then pip -- equivalent to python3 -m venv venv
+* Use [uv](https://github.com/astral-sh/uv) to create venv and run pythonn files from cursor or vscode, 10x faster then pip -- equivalent to python3 -m venv venv
 
 ```py
 # clone the repo
