@@ -3,9 +3,9 @@ from pydantic import BaseModel, Field
 from agents import Agent, WebSearchTool, trace, Runner, gen_trace_id, function_tool
 from agents.model_settings import ModelSettings
 import asyncio
-import os
-from typing import Dict
-from IPython.display import display, Markdown
+# from IPython.display import display, Markdown
+# from typing import Dict
+# import os
 # import sendgrid
 # from sendgrid.helpers.mail import Mail, Email, To, Content
 
@@ -128,14 +128,18 @@ async def send_email(report: ReportData):
 
 
 
-query ="Latest AI Agent frameworks in 2025"
+# query ="Latest AI Agent frameworks in 2025"
 async def main():
     with trace("Research trace"):
+        query = input("Hi! What topic would you like reseach?")
         print("Starting research...")
         search_plan = await plan_searches(query)
         search_results = await perform_searches(search_plan)
         report = await write_report(query, search_results)
-        print(report)
-        print("-> you can send it by email too!")
-        # await send_email(report) 
+        print("\n---- Short Summary ----")
+        print(report.short_summary)
+        print("\n---- Markdown Report ----")
+        print(report.markdown_report)
+        print("\n---> you can send the research by email too!\n")
+        # await send_email(report)
 asyncio.run(main())
