@@ -22,7 +22,7 @@ GROQ_API_KEY=
 
 ```py 
 # To run your .py files, go to .py root folder:
-cd Documents/dev/agents
+cd Documents/dev/agents/<folder name>
 # using python
 python3 <filename.py>
 # using uv 

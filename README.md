@@ -1,3 +1,4 @@
 # AI Agents
-/agents folder
+/agents/openai 
+/agents/crewai
 
